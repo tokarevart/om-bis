@@ -19,7 +19,7 @@ fn optimize(range: Range<f64>, delta: f64, eps: f64, f: impl Fn(f64) -> f64) -> 
 
 fn main() {
     let range = 0.0..1.0;
-    let eps = 1e-8;
+    let eps = 1e-3;
     let delta = 0.5 * eps;
     let f = |x| x * x;
 
