@@ -1,6 +1,6 @@
 use std::ops::Range;
 
-fn optimize(range: Range<f64>, delta: f64, eps: f64, f: impl Fn(f64) -> f64) -> f64 {
+fn search(range: Range<f64>, delta: f64, eps: f64, f: impl Fn(f64) -> f64) -> f64 {
     assert!(eps > delta);
 
     let Range{ mut start, mut end } = range;
@@ -23,7 +23,7 @@ fn main() {
     let delta = 0.5 * eps;
     let f = |x| x * x;
 
-    let x = optimize(range, delta, eps, f);
+    let x = search(range, delta, eps, f);
     println!("  x : {}", x);
     println!("f(x): {}", f(x));
 }
