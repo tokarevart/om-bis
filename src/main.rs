@@ -1,3 +1,3 @@
 fn main() {
-    println!("Bisection method");
+    println!("Bisection method!");
 }
