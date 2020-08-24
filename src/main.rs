@@ -24,6 +24,6 @@ fn main() {
     let f = |x| x * x;
 
     let x = optimize(range, delta, eps, f);
-    println!("X: {}", x);
-    println!("J: {}", f(x));
+    println!("  x : {}", x);
+    println!("f(x): {}", f(x));
 }
