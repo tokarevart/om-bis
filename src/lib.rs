@@ -1,6 +1,7 @@
 pub use std::ops::Range;
 
 pub fn search(range: Range<f64>, delta: f64, eps: f64, f: impl Fn(f64) -> f64) -> f64 {
+    assert!(delta > 0.0);
     assert!(eps > delta);
 
     let Range{ mut start, mut end } = range;
