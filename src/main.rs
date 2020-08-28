@@ -1,7 +1,7 @@
 use om_bis::*;
 use std::f64::consts::FRAC_PI_2;
 
-fn method_report() {
+fn main() {
     let f = |x: f64| x * x;
     let range = 0.0..1.0;
     let eps = 1e-4;
@@ -28,13 +28,4 @@ fn method_report() {
     println!("x  : {}", x);
     println!("e^x: {}", f(x));
     println!("");
-}
-
-fn ict_report() {
-    unimplemented!();
-}
-
-fn main() {
-    method_report();
-    ict_report();
 }
